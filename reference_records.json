@@ -1,0 +1,116 @@
+{
+  "_note": "All data is synthetic and anonymised. No real patient data.",
+  "patients": [
+    {
+      "patient_id": "PAT-001",
+      "dob_yyyymmdd": 19650315,
+      "sex": "M",
+      "registration_ts": "2026-01-15T08:00:00Z"
+    },
+    {
+      "patient_id": "PAT-002",
+      "dob_yyyymmdd": 19820722,
+      "sex": "F",
+      "registration_ts": "2026-02-01T09:30:00Z"
+    }
+  ],
+  "observations": [
+    {
+      "obs_id": "OBS-001",
+      "label": "normal_glucose",
+      "patient_id": "PAT-001",
+      "loinc_code": "2345-7",
+      "display_name": "Glucose",
+      "value_wad18": 95000000000000000000,
+      "unit": "mg/dL",
+      "ref_low_wad18":   70000000000000000000,
+      "ref_high_wad18": 100000000000000000000,
+      "crit_low_wad18":  40000000000000000000,
+      "crit_high_wad18":500000000000000000000,
+      "timestamp": "2026-01-15T10:00:00Z",
+      "expected_status": "VERIFIED",
+      "expected_severity": "NORMAL"
+    },
+    {
+      "obs_id": "OBS-002",
+      "label": "critical_low_glucose",
+      "patient_id": "PAT-001",
+      "loinc_code": "2345-7",
+      "display_name": "Glucose",
+      "value_wad18": 35000000000000000000,
+      "unit": "mg/dL",
+      "ref_low_wad18":   70000000000000000000,
+      "ref_high_wad18": 100000000000000000000,
+      "crit_low_wad18":  40000000000000000000,
+      "crit_high_wad18":500000000000000000000,
+      "timestamp": "2026-01-16T06:30:00Z",
+      "expected_status": "VERIFIED_WITH_FLAGS",
+      "expected_severity": "CRITICAL_LOW"
+    },
+    {
+      "obs_id": "OBS-003",
+      "label": "high_sodium",
+      "patient_id": "PAT-002",
+      "loinc_code": "2951-2",
+      "display_name": "Sodium",
+      "value_wad18": 152000000000000000000,
+      "unit": "mEq/L",
+      "ref_low_wad18":  136000000000000000000,
+      "ref_high_wad18": 145000000000000000000,
+      "crit_low_wad18": 120000000000000000000,
+      "crit_high_wad18":160000000000000000000,
+      "timestamp": "2026-02-01T11:00:00Z",
+      "expected_status": "VERIFIED_WITH_FLAGS",
+      "expected_severity": "HIGH"
+    },
+    {
+      "obs_id": "OBS-004",
+      "label": "tampered_patient_hash",
+      "patient_id": "PAT-001",
+      "loinc_code": "718-7",
+      "display_name": "Hemoglobin",
+      "value_wad18": 145000000000000000000,
+      "unit": "g/dL",
+      "ref_low_wad18":  120000000000000000000,
+      "ref_high_wad18": 175000000000000000000,
+      "crit_low_wad18":  70000000000000000000,
+      "crit_high_wad18":200000000000000000000,
+      "timestamp": "2026-01-20T09:00:00Z",
+      "tamper_patient_hash": true,
+      "expected_status": "INVALID_PATIENT",
+      "expected_severity": null
+    },
+    {
+      "obs_id": "OBS-005",
+      "label": "temporal_inconsistency",
+      "patient_id": "PAT-001",
+      "loinc_code": "8867-4",
+      "display_name": "Heart Rate",
+      "value_wad18": 72000000000000000000,
+      "unit": "bpm",
+      "ref_low_wad18":  60000000000000000000,
+      "ref_high_wad18":100000000000000000000,
+      "crit_low_wad18": 40000000000000000000,
+      "crit_high_wad18":150000000000000000000,
+      "timestamp": "2025-12-01T10:00:00Z",
+      "expected_status": "TEMPORAL_INCONSISTENCY",
+      "expected_severity": "NORMAL"
+    },
+    {
+      "obs_id": "OBS-006",
+      "label": "normal_potassium",
+      "patient_id": "PAT-002",
+      "loinc_code": "2823-3",
+      "display_name": "Potassium",
+      "value_wad18": 4200000000000000000,
+      "unit": "mEq/L",
+      "ref_low_wad18":  3500000000000000000,
+      "ref_high_wad18": 5000000000000000000,
+      "crit_low_wad18": 2500000000000000000,
+      "crit_high_wad18":6500000000000000000,
+      "timestamp": "2026-02-05T08:00:00Z",
+      "expected_status": "VERIFIED",
+      "expected_severity": "NORMAL"
+    }
+  ]
+}
