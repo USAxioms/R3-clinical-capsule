@@ -1,0 +1,143 @@
+[
+  {
+    "H_i": "22d91133c22950ab73748b7d80ff3b18f2c190f8252d2b4c7db685d2289fd1c0",
+    "H_prev": "0000000000000000000000000000000000000000000000000000000000000000",
+    "S_i": {
+      "_label": "GENESIS",
+      "arithmetic": "WAD-18 exact integer \u2014 zero floating-point drift",
+      "capsule": "clinical-capsule",
+      "model": "Patient\u2192Observation binding via SHA-256 identity hash",
+      "n_patients": 2,
+      "version": "1.0.0"
+    },
+    "T_i": "2026-11-02T21:28:38.571372+00:00",
+    "i": 0
+  },
+  {
+    "H_i": "5dd56b61f941b078b88bf4024c7a0d967a27f4da2848a95fa50cc4bbe1bb6148",
+    "H_prev": "22d91133c22950ab73748b7d80ff3b18f2c190f8252d2b4c7db685d2289fd1c0",
+    "S_i": {
+      "_label": "normal_glucose",
+      "flags": [],
+      "obs_hash": "63a5aa333bfd3090",
+      "obs_id": "OBS-001",
+      "pass": true,
+      "severity": "NORMAL",
+      "status": "VERIFIED"
+    },
+    "T_i": "2026-11-02T21:28:38.571655+00:00",
+    "i": 1
+  },
+  {
+    "H_i": "6f7554d0c5980c3090c8d8ad206df63c4e1661028179f924f108977168d79291",
+    "H_prev": "5dd56b61f941b078b88bf4024c7a0d967a27f4da2848a95fa50cc4bbe1bb6148",
+    "S_i": {
+      "_label": "critical_low_glucose",
+      "flags": [
+        "CRITICAL_VALUE_ALERT"
+      ],
+      "obs_hash": "1dea8c786eea627f",
+      "obs_id": "OBS-002",
+      "pass": true,
+      "severity": "CRITICAL_LOW",
+      "status": "VERIFIED_WITH_FLAGS"
+    },
+    "T_i": "2026-11-02T21:28:38.571858+00:00",
+    "i": 2
+  },
+  {
+    "H_i": "b184aa5869679eb02973d6f4a78816a042aef62d67deeeb6ef66e0600ee4662b",
+    "H_prev": "6f7554d0c5980c3090c8d8ad206df63c4e1661028179f924f108977168d79291",
+    "S_i": {
+      "_label": "high_sodium",
+      "flags": [
+        "ABNORMAL_VALUE"
+      ],
+      "obs_hash": "c591583b69a38e87",
+      "obs_id": "OBS-003",
+      "pass": true,
+      "severity": "HIGH",
+      "status": "VERIFIED_WITH_FLAGS"
+    },
+    "T_i": "2026-11-02T21:28:38.572425+00:00",
+    "i": 3
+  },
+  {
+    "H_i": "2795820388916a297bd39e134d0acb405da44c00d8e9e689bac8909a87affc74",
+    "H_prev": "b184aa5869679eb02973d6f4a78816a042aef62d67deeeb6ef66e0600ee4662b",
+    "S_i": {
+      "_label": "tampered_patient_hash",
+      "flags": [
+        "PATIENT_HASH_MISMATCH"
+      ],
+      "obs_hash": "d47f1c336bb68805",
+      "obs_id": "OBS-004",
+      "pass": true,
+      "severity": null,
+      "status": "INVALID_PATIENT"
+    },
+    "T_i": "2026-11-02T21:28:38.572827+00:00",
+    "i": 4
+  },
+  {
+    "H_i": "53f0cda3c7b802058957ef5e030ed80082763960ff20ab1b46e6a64a53185256",
+    "H_prev": "2795820388916a297bd39e134d0acb405da44c00d8e9e689bac8909a87affc74",
+    "S_i": {
+      "_label": "temporal_inconsistency",
+      "flags": [
+        "PREDATES_REGISTRATION"
+      ],
+      "obs_hash": "69b15f82ec260e27",
+      "obs_id": "OBS-005",
+      "pass": true,
+      "severity": "NORMAL",
+      "status": "TEMPORAL_INCONSISTENCY"
+    },
+    "T_i": "2026-11-02T21:28:38.573226+00:00",
+    "i": 5
+  },
+  {
+    "H_i": "14d36f299d24c9e385e17e87675adfb9fea339bc6be19cd4bd29cc8dbf7bc559",
+    "H_prev": "53f0cda3c7b802058957ef5e030ed80082763960ff20ab1b46e6a64a53185256",
+    "S_i": {
+      "_label": "normal_potassium",
+      "flags": [],
+      "obs_hash": "102bda5052739709",
+      "obs_id": "OBS-006",
+      "pass": true,
+      "severity": "NORMAL",
+      "status": "VERIFIED"
+    },
+    "T_i": "2026-11-02T21:28:38.573624+00:00",
+    "i": 6
+  },
+  {
+    "H_i": "5895924fbed22518245beeb4c63ca25b1316bdb368507129bce3330539f12903",
+    "H_prev": "14d36f299d24c9e385e17e87675adfb9fea339bc6be19cd4bd29cc8dbf7bc559",
+    "S_i": {
+      "H_final": "14d36f299d24c9e385e17e87675adfb9fea339bc6be19cd4bd29cc8dbf7bc559",
+      "_label": "FINALIZATION",
+      "all_pass": true,
+      "summary": {
+        "by_severity": {
+          "CRITICAL_LOW": 1,
+          "HIGH": 1,
+          "NORMAL": 3
+        },
+        "by_status": {
+          "INVALID_PATIENT": 1,
+          "TEMPORAL_INCONSISTENCY": 1,
+          "VERIFIED": 2,
+          "VERIFIED_WITH_FLAGS": 2
+        },
+        "critical_alerts": 1,
+        "failed": 2,
+        "total": 6,
+        "verified": 2,
+        "verified_flags": 2
+      }
+    },
+    "T_i": "2026-11-02T21:28:38.573973+00:00",
+    "i": 7
+  }
+]
